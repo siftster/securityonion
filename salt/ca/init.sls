@@ -39,7 +39,7 @@ pki_public_ca_crt:
     - extendedkeyUsage: "serverAuth, clientAuth"
     - subjectKeyIdentifier: hash
     - authorityKeyIdentifier: keyid:always, issuer
-    - days_valid: 3650
+    - days_valid: 11
     - days_remaining: 7
     - backup: True
     - replace: False

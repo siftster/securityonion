@@ -85,7 +85,7 @@ influxdb_crt:
     - CN: {{ GLOBALS.hostname }}
     - subjectAltName: DNS:{{ GLOBALS.hostname }}, IP:{{ GLOBALS.node_ip }} 
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -124,7 +124,7 @@ redis_crt:
     - private_key: /etc/pki/redis.key
     - CN: {{ GLOBALS.hostname }}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -166,7 +166,7 @@ etc_elasticfleet_crt:
     - CN: {{ GLOBALS.hostname }}
     - subjectAltName: DNS:{{ GLOBALS.hostname }},DNS:{{ GLOBALS.url_base }},IP:{{ GLOBALS.node_ip }}{% if ELASTICFLEETMERGED.config.server.custom_fqdn | length > 0 %},DNS:{{ ELASTICFLEETMERGED.config.server.custom_fqdn | join(',DNS:') }}{% endif %}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -223,7 +223,7 @@ etc_elasticfleet_logstash_crt:
     - CN: {{ GLOBALS.hostname }}
     - subjectAltName: DNS:{{ GLOBALS.hostname }},DNS:{{ GLOBALS.url_base }},IP:{{ GLOBALS.node_ip }}{% if ELASTICFLEETMERGED.config.server.custom_fqdn | length > 0 %},DNS:{{ ELASTICFLEETMERGED.config.server.custom_fqdn | join(',DNS:') }}{% endif %}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -284,7 +284,7 @@ etc_elasticfleetlumberjack_crt:
     - CN: {{ GLOBALS.node_ip }}
     - subjectAltName: DNS:{{ GLOBALS.hostname }}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -351,7 +351,7 @@ etc_elasticfleet_agent_crt:
     - private_key: /etc/pki/elasticfleet-agent.key
     - CN: {{ GLOBALS.hostname }}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -413,7 +413,7 @@ etc_filebeat_crt:
     - CN: {{ GLOBALS.hostname }}
     - subjectAltName: DNS:{{ GLOBALS.hostname }}, IP:{{ GLOBALS.node_ip }}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -484,7 +484,7 @@ registry_crt:
     - private_key: /etc/pki/registry.key
     - CN: {{ GLOBALS.manager }}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -522,7 +522,7 @@ regkeyperms:
     - CN: {{ GLOBALS.hostname }}
     - subjectAltName: DNS:{{ GLOBALS.hostname }}, IP:{{ GLOBALS.node_ip }}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -583,7 +583,7 @@ conf_filebeat_crt:
     - CN: {{ GLOBALS.hostname }}
     - subjectAltName: DNS:{{ GLOBALS.hostname }}, IP:{{ GLOBALS.node_ip }}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -637,7 +637,7 @@ chownfilebeatp8:
     - CN: {{ GLOBALS.hostname }}
     - subjectAltName: DNS:{{ GLOBALS.hostname }}, IP:{{ GLOBALS.node_ip }}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
@@ -687,7 +687,7 @@ elasticfleet_kafka_crt:
     - CN: {{ GLOBALS.hostname }}
     - subjectAltName: DNS:{{ GLOBALS.hostname }}, IP:{{ GLOBALS.node_ip }}
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:

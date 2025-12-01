@@ -65,7 +65,7 @@ managerssl_crt:
     - CN: {{ GLOBALS.hostname }}
     - subjectAltName: "DNS:{{ GLOBALS.hostname }}, IP:{{ GLOBALS.node_ip }}, DNS:{{ GLOBALS.url_base }}" 
     - days_remaining: 7
-    - days_valid: 820
+    - days_valid: 9
     - backup: True
     - timeout: 30
     - retry:
